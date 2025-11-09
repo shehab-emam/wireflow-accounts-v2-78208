@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Accounting System Design System for Arabic/English */
+
+@layer base {
+  :root {
+    /* Professional blue-teal accounting theme */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 197 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 197 100% 40%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 31% 91%;
+    --input: 214 31% 91%;
+    --ring: 197 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(197 100% 35%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 76% 30%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Professional shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(215 25% 15% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(215 25% 15% / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(215 25% 15% / 0.16);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode professional theme */
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 19%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 19%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 197 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 197 100% 45%;
+
+    --secondary: 215 28% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 28% 25%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 142 76% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --success: 142 76% 40%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 28% 30%;
+    --input: 215 28% 30%;
+    --ring: 197 100% 50%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(197 100% 40%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 76% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 19%), hsl(215 28% 22%));
+    
+    --sidebar-background: 215 28% 15%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 197 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 28% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 28% 30%;
+    --sidebar-ring: 197 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Cairo', sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+
+  /* Professional accounting styles */
+  .accounting-card {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-soft)] 
+           hover:shadow-[var(--shadow-medium)] transition-[var(--transition-smooth)];
+  }
+
+  .accounting-gradient {
+    background: var(--gradient-card);
+  }
+
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+
+  /* RTL support */
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+}
